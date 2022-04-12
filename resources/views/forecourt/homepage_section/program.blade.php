@@ -11,7 +11,7 @@
                     <h3 class="program__title">Program A</h3>
                     <p class="program__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ea laborum molestias distinctio dignissimos? Fuga, voluptatem amet! Eaque, vel itaque porro eveniet repellendus doloremque culpa? Mollitia, est soluta. Beatae, sit.</p>
                     
-                    <a href="" class="button button--flex button--small program__button">
+                    <a href="{{route('program')}}" class="button button--flex button--small program__button">
                         Detil Program >>>
                     </a>
                 </div>
@@ -22,7 +22,7 @@
                     <h3 class="program__title">Program B</h3>
                     <p class="program__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ea laborum molestias distinctio dignissimos? Fuga, voluptatem amet! Eaque, vel itaque porro eveniet repellendus doloremque culpa? Mollitia, est soluta. Beatae, sit.</p>
                     
-                    <a href="" class="button button--flex button--small program__button">
+                    <a href="{{route('program')}}" class="button button--flex button--small program__button">
                         Detil Program >>>
                     </a>
                 </div>
@@ -33,7 +33,7 @@
                     <h3 class="program__title">Program C</h3>
                     <p class="program__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ea laborum molestias distinctio dignissimos? Fuga, voluptatem amet! Eaque, vel itaque porro eveniet repellendus doloremque culpa? Mollitia, est soluta. Beatae, sit.</p>
                     
-                    <a href="" class="button button--flex button--small program__button">
+                    <a href="{{route('program')}}" class="button button--flex button--small program__button">
                         Detil Program >>>
                     </a>
                 </div>
