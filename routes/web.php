@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['uses' => 'HomeController@homepage', 'as' => 'homepage']);
+Route::get('/information', ['uses' => 'HomeController@information', 'as' => 'information']);
+Route::get('/program', ['uses' => 'HomeController@program', 'as' => 'program']);
+Route::get('/team', ['uses' => 'HomeController@team', 'as' => 'team']);
