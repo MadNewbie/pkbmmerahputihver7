@@ -259,12 +259,21 @@ img {
     color: #fff;
     font-weight: var(--font-medium);
     transition: .3s;
+    text-transform: capitalize;
 }
 .nav__link:hover {
     color: var(--title-color);
 }
 .nav__active .nav__link {
     text-decoration: underline;
+}
+.nav__locale-quote {
+    color: #fff;
+    margin-right: 1rem;
+}
+.nav__locale-flag {
+    height: 25px;
+    width: 25px;
 }
 
 /* ---Show Menu */

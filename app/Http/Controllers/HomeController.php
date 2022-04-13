@@ -1,7 +1,9 @@
 <?php
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\App;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
 {
@@ -18,7 +20,18 @@ class HomeController extends Controller
     public function information()
     {
         $active = 'information';
-        $submenus = ['sejarah','visi-misi','legalitas'];
+        $submenus = [
+            [
+                'link'=>'sejarah',
+                'title' => __('submenu.information.sejarah'),
+            ],[
+                'link'=>'visi-misi',
+                'title' => __('submenu.information.visi-misi'),
+            ],[
+                'link'=>'legalitas',
+                'title' => __('submenu.information.legalitas'),
+            ]
+        ];
         $data = 'info';
         $options = compact('data','submenus','active');
         return view('forecourt/information', $options);

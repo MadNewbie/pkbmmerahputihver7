@@ -1,6 +1,6 @@
 <section class="section container program" id="program">
     <h2 class="section__title-center program__title">
-        Program
+        {!!__('homepage.title.program')!!}
     </h2>
 
     <div class="program__container container swiper">
@@ -12,7 +12,7 @@
                     <p class="program__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ea laborum molestias distinctio dignissimos? Fuga, voluptatem amet! Eaque, vel itaque porro eveniet repellendus doloremque culpa? Mollitia, est soluta. Beatae, sit.</p>
                     
                     <a href="{{route('program')}}" class="button button--flex button--small program__button">
-                        Detil Program >>>
+                        {!!__('homepage.button.detil_program')!!}
                     </a>
                 </div>
             </div>

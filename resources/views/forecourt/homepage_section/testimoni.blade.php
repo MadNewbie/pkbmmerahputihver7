@@ -1,6 +1,6 @@
 <section class="section container testimoni">
     <h2 class="section__title-center testimoni__title">
-        Testimoni
+        {!!__('homepage.title.testimoni')!!}
     </h2>
     <div class="testimoni__container grid">
         <div class="testimoni__card grid testimoni__card-odd">

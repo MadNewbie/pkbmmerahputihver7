@@ -13,7 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Homepage
 Route::get('/', ['uses' => 'HomeController@homepage', 'as' => 'homepage']);
 Route::get('/information', ['uses' => 'HomeController@information', 'as' => 'information']);
 Route::get('/program', ['uses' => 'HomeController@program', 'as' => 'program']);
 Route::get('/team', ['uses' => 'HomeController@team', 'as' => 'team']);
+
+// Language
+Route::get('/language/{lang}', ['uses' => 'LanguageController@changeLanguage', 'as' => 'language.change']);
