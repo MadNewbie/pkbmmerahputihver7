@@ -30,5 +30,6 @@ Route::group(['middleware' => ['web','auth','acl'], 'prefix' => 'backyard', 'as'
     Route::get('/', ['uses' => 'Backyard\HomeController@index', 'as' => 'home']);
     Route::resource('users', 'Backyard\UserController', ['names' => 'user']);
     Route::resource('roles', 'Backyard\RoleController', ['names' => 'role']);
-    Route::resource('teachers','Backyard\TeacherController', ['names' => 'teacher']);
+    Route::resource('events','Backyard\EventController', ['names' => 'event']);
+    Route::resource('news','Backyard\NewsController', ['names' => 'news']);
 });
