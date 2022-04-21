@@ -14,10 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Homepage
-Route::get('/', ['uses' => 'HomeController@homepage', 'as' => 'homepage']);
-Route::get('/information', ['uses' => 'HomeController@information', 'as' => 'information']);
-Route::get('/program', ['uses' => 'HomeController@program', 'as' => 'program']);
-Route::get('/team', ['uses' => 'HomeController@team', 'as' => 'team']);
+Route::get('/', ['uses' => 'Forecourt\HomeController@homepage', 'as' => 'homepage']);
+Route::get('/information', ['uses' => 'Forecourt\HomeController@information', 'as' => 'information']);
+Route::get('/program', ['uses' => 'Forecourt\HomeController@program', 'as' => 'program']);
+Route::get('/team', ['uses' => 'Forecourt\HomeController@team', 'as' => 'team']);
 
 // Language
-Route::get('/language/{lang}', ['uses' => 'LanguageController@changeLanguage', 'as' => 'language.change']);
+Route::get('/language/{lang}', ['uses' => 'Forecourt\LanguageController@changeLanguage', 'as' => 'language.change']);
+
+Auth::routes(['register' => false]);
+
+// Backyard
+
+Route::group(['middleware' => ['web','auth','acl'], 'prefix' => 'backyard', 'as' => 'backyard.'], function() {
+    Route::get('/', ['uses' => 'Backyard\HomeController@index', 'as' => 'home']);
+    Route::resource('users', 'Backyard\UserController', ['names' => 'user']);
+    Route::resource('roles', 'Backyard\RoleController', ['names' => 'role']);
+    Route::resource('teachers','Backyard\TeacherController', ['names' => 'teacher']);
+});

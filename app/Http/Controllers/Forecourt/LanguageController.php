@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Forecourt;
 
 use App\Http\Controllers\Controller;
 
