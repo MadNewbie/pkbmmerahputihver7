@@ -8,7 +8,7 @@
 <main class="main">
     <section class="sejarah" id="sejarah">
         <div class="container sejarah__container">
-            <h2 class="sejarah__title section__title-center">Sejarah</h2>
+            <h2 class="sejarah__title section__title-center"><?php printf('%s',ucwords(trans('submenu.information.sejarah')))?></h2>
             <div class="grid sejarah__content">
                 <img src="{{asset('image/sejarah.jpg')}}" alt="foto-sejarah" class="sejarah__img">
                 <p class="sejarah__description">
@@ -19,7 +19,7 @@
     </section>
     <section class="visi-misi" id="visi-misi">
         <div class="container visi-misi__container">
-            <h2 class="sejarah__title section__title-center">Visi dan Misi</h2>
+            <h2 class="sejarah__title section__title-center"><?php printf('%s',ucwords(trans('submenu.information.visi-misi')))?></h2>
             <div class="grid visi-misi__content">
                 <img src="{{asset('image/visi-misi.jpg')}}" alt="foto-visi-misi" class="visi-misi__img">
                 <p class="visi-misi__description">
@@ -30,7 +30,7 @@
     </section>
     <section class="legalitas" id="legalitas">
         <div class="container legalitas__container">
-            <h2 class="legalitas__title section__title-center">Legalitas</h2>
+            <h2 class="legalitas__title section__title-center"><?php printf('%s',ucwords(trans('submenu.information.legalitas')))?></h2>
             <div class="grid legalitas__content">
                 <div class="legalitas__card grid">
                     <img src="{{asset('image/kemenkumham.jpg')}}" alt="foto-surat-legalitas-1" class="legalitas__img">
