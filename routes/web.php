@@ -22,7 +22,9 @@ Route::get('/team', ['uses' => 'Forecourt\HomeController@team', 'as' => 'team'])
 // Language
 Route::get('/language/{lang}', ['uses' => 'Forecourt\LanguageController@changeLanguage', 'as' => 'language.change']);
 
+// Auth
 Auth::routes(['register' => false]);
+Route::get('/logout', ['uses' => 'Auth\LoginController@logout', 'as' => 'logout']);
 
 // Backyard
 

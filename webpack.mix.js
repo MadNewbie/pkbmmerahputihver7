@@ -17,4 +17,5 @@ mix
     .postCss('resources/css/app.css', 'public/css/app.css')
     .postCss('resources/css/information.css', 'public/css/information.css')
     .postCss('resources/css/program.css', 'public/css/program.css')
-    .postCss('resources/css/gate.css', 'public/css/gate.css');
+    .postCss('resources/css/gate.css', 'public/css/gate.css')
+    .postCss('resources/css/backyard.css', 'public/css/backyard.css');

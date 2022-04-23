@@ -28,9 +28,13 @@
         column-gap: 3rem;
     }
     .login__container {
-        padding: 10rem 0 5rem;
+        padding: 7rem 0 5rem;
         align-items: center;
         text-align: center;
+    }
+
+    .footer__copy {
+        margin: 1rem 0 2rem;
     }
 }
 
