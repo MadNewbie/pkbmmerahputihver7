@@ -11,6 +11,6 @@
 
 @section('content')
 {!! Form::model($role, ['route' => [$routePrefix.'update', $role->id], 'method' => 'PATCH']) !!}
-    @include('backyard.role._form')
+    @include($routePrefix.'_form')
 {!! Form::close() !!}
 @endsection

@@ -20,6 +20,9 @@ mix
     // Role
     .js('/resources/js/backyard/role/index.js', 'public/js/backyard/role')
 
+    // User
+    .js('/resources/js/backyard/user/index.js', 'public/js/backyard/user')
+
     // Forecourt
     .postCss('resources/css/app.css', 'public/css/app.css')
     .postCss('resources/css/information.css', 'public/css/information.css')

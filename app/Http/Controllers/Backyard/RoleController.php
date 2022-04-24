@@ -76,12 +76,12 @@ class RoleController extends BaseController
         $res &= $model->save();
         $model->syncPermissions($input['permissions']);
 
-        return redirect()->route(self::getRoutePrefix('index'))->with('success','Data berhasil tersimpan');
+        return $res ? redirect()->route(self::getRoutePrefix('index'))->with('success','Data berhasil tersimpan') : redirect()->route(self::getRoutePrefix('index'))->with('error','Data gagal tersimpan');
     }
 
     public function create()
     {
-        $permissions = Permission::all();
+        $permissions = Permission::orderBy('name', 'asc')->get();
         return self::makeView('create', compact('permissions'));
     }
 
@@ -93,7 +93,7 @@ class RoleController extends BaseController
     public function edit($id)
     {
         $role = Role::find($id);
-        $permissions = Permission::all();
+        $permissions = Permission::orderBy('name', 'asc')->get();
         $rolePermissions = DB::table("role_has_permissions")->where("role_has_permissions.role_id", $id)
             ->pluck('role_has_permissions.permission_id', 'role_has_permissions.permission_id')
             ->all();
