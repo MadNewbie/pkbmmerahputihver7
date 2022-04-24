@@ -1,1 +1,1 @@
-@include('template.backyard')
+@extends('template.backyard')

@@ -30,8 +30,13 @@ Route::get('/logout', ['uses' => 'Auth\LoginController@logout', 'as' => 'logout'
 
 Route::group(['middleware' => ['web','auth','acl'], 'prefix' => 'backyard', 'as' => 'backyard.'], function() {
     Route::get('/', ['uses' => 'Backyard\HomeController@index', 'as' => 'home']);
-    Route::resource('users', 'Backyard\UserController', ['names' => 'user']);
+    // Role
+    Route::get('roles/indexData', ['uses' => 'Backyard\RoleController@indexData', 'as' => 'role.index.data']);
     Route::resource('roles', 'Backyard\RoleController', ['names' => 'role']);
+    // User
+    Route::resource('users', 'Backyard\UserController', ['names' => 'user']);
+    // Event
     Route::resource('events','Backyard\EventController', ['names' => 'event']);
+    // News
     Route::resource('news','Backyard\NewsController', ['names' => 'news']);
 });

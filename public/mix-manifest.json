@@ -5,5 +5,6 @@
     "/css/program.css": "/css/program.css",
     "/css/gate.css": "/css/gate.css",
     "/css/backyard.css": "/css/backyard.css",
+    "/js/backyard/role/index.js": "/js/backyard/role/index.js",
     "/js/section/program.js": "/js/section/program.js"
 }

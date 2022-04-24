@@ -11,7 +11,7 @@ class BaseController extends Controller
     {
         return [
             'modelName' => static::$modelName,
-            'getRoutePrefix' => static::getRoutePrefix(),
+            'routePrefix' => static::getRoutePrefix(),
         ];
     }
 

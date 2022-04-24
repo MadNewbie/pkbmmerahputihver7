@@ -1,5 +1,6 @@
 <?php
     use App\Libraries\Mad\Helper;
+    // dd(session()->has('success'));
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +19,8 @@
     <link rel="stylesheet" href="{{asset('vendor/adminlte/css/adminlte.min.css')}}">
     <!-- Fontawesome -->
     <link rel="stylesheet" href="{{asset('vendor/fontawesome/css/all.min.css')}}">
+    <!-- Datatables -->
+    <link rel="stylesheet" href="{{asset('vendor/datatables/css/dataTables.bootstrap4.min.css')}}">
     <!-- Custom Style -->
     <link rel="stylesheet" href="{{asset('css/backyard.css')}}">
     @yield('css-include-after')
@@ -117,6 +120,10 @@
     <script src="{{asset('vendor/bootstrap/js/bootstrap.min.js')}}"></script>
     <!-- AdminLTE -->
     <script src="{{asset('vendor/adminlte/js/adminlte.min.js')}}"></script>
+    <!-- Datatable -->
+    <script src="{{asset('vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('vendor/datatables/js/dataTables.bootstrap4.min.js')}}"></script>
+    
     <script type="text/javascript">
         @yield('js-inline-data')
     </script>
@@ -137,6 +144,7 @@
                     alertify.notify('<?= $notifMessage['info'] ?>', 'blue');
                 @endif
                 @if($message = Session::get('success'))
+                    console.log('success');
                     alertify.success('<?= $message ?>');
                 @endif
                 @if($message = Session::get('error'))
@@ -155,6 +163,6 @@
                     alertify.error('<?= $message ?>');
                 @endif
             })
-        </script>
+    </script>
 </body>
 </html>
