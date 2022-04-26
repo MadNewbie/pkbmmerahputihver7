@@ -1,6 +1,5 @@
 <?php
     use App\Libraries\Mad\Helper;
-    // dd(session()->has('success'));
 ?>
 
 <!DOCTYPE html>
@@ -116,6 +115,8 @@
     <script src="{{asset('vendor/jquery/js/jquery.min.js')}}"></script>
     <!--Alertify-->
     <script src="{{asset('vendor/alertifyjs/js/alertify.min.js')}}"></script>
+    <!-- Popper -->
+    <script src="{{asset('vendor/umd/popper.min.js')}}"></script>
     <!-- Bootstrap -->
     <script src="{{asset('vendor/bootstrap/js/bootstrap.min.js')}}"></script>
     <!-- AdminLTE -->

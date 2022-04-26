@@ -23,6 +23,10 @@ mix
     // User
     .js('/resources/js/backyard/user/index.js', 'public/js/backyard/user')
 
+    // News
+    .js('/resources/js/backyard/news/index.js', 'public/js/backyard/news')
+    .js('/resources/js/backyard/news/_form.js', 'public/js/backyard/news')
+
     // Forecourt
     .postCss('resources/css/app.css', 'public/css/app.css')
     .postCss('resources/css/information.css', 'public/css/information.css')

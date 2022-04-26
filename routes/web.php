@@ -39,5 +39,8 @@ Route::group(['middleware' => ['web','auth','acl'], 'prefix' => 'backyard', 'as'
     // Event
     Route::resource('events','Backyard\EventController', ['names' => 'event']);
     // News
+    Route::get('news/indexData', ['uses' => 'Backyard\NewsController@indexData', 'as' => 'news.index.data']);
+    Route::get('news/makePublicYes/{id}', ['uses' => 'Backyard\NewsController@makeIsPublicYes', 'as' => 'news.public.yes']);
+    Route::get('news/makePublicNo/{id}', ['uses' => 'Backyard\NewsController@makeIsPublicNo', 'as' => 'news.public.no']);
     Route::resource('news','Backyard\NewsController', ['names' => 'news']);
 });
