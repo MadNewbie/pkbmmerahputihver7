@@ -36,11 +36,14 @@ Route::group(['middleware' => ['web','auth','acl'], 'prefix' => 'backyard', 'as'
     // User
     Route::get('users/indexData', ['uses' => 'Backyard\UserController@indexData', 'as' => 'user.index.data']);
     Route::resource('users', 'Backyard\UserController', ['names' => 'user']);
-    // Event
-    Route::resource('events','Backyard\EventController', ['names' => 'event']);
     // News
     Route::get('news/indexData', ['uses' => 'Backyard\NewsController@indexData', 'as' => 'news.index.data']);
     Route::get('news/makePublicYes/{id}', ['uses' => 'Backyard\NewsController@makeIsPublicYes', 'as' => 'news.public.yes']);
     Route::get('news/makePublicNo/{id}', ['uses' => 'Backyard\NewsController@makeIsPublicNo', 'as' => 'news.public.no']);
     Route::resource('news','Backyard\NewsController', ['names' => 'news']);
+    // Event
+    Route::get('events/indexData', ['uses' => 'Backyard\EventController@indexData', 'as' => 'event.index.data']);
+    Route::get('events/makePublicYes/{id}', ['uses' => 'Backyard\EventController@makeIsPublicYes', 'as' => 'event.public.yes']);
+    Route::get('events/makePublicNo/{id}', ['uses' => 'Backyard\EventController@makeIsPublicNo', 'as' => 'event.public.no']);
+    Route::resource('events','Backyard\EventController', ['names' => 'event']);
 });

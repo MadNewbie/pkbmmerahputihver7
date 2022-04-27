@@ -5,6 +5,8 @@
     "/css/program.css": "/css/program.css",
     "/css/gate.css": "/css/gate.css",
     "/css/backyard.css": "/css/backyard.css",
+    "/js/backyard/event/_form.js": "/js/backyard/event/_form.js",
+    "/js/backyard/event/index.js": "/js/backyard/event/index.js",
     "/js/backyard/news/_form.js": "/js/backyard/news/_form.js",
     "/js/backyard/news/index.js": "/js/backyard/news/index.js",
     "/js/backyard/role/index.js": "/js/backyard/role/index.js",

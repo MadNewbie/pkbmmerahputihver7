@@ -27,6 +27,10 @@ mix
     .js('/resources/js/backyard/news/index.js', 'public/js/backyard/news')
     .js('/resources/js/backyard/news/_form.js', 'public/js/backyard/news')
 
+    // Event
+    .js('/resources/js/backyard/event/index.js', 'public/js/backyard/event')
+    .js('/resources/js/backyard/event/_form.js', 'public/js/backyard/event')
+
     // Forecourt
     .postCss('resources/css/app.css', 'public/css/app.css')
     .postCss('resources/css/information.css', 'public/css/information.css')

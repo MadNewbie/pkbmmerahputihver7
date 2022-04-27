@@ -108,7 +108,7 @@ Class NewsController extends BaseController
                 $fileNameContentRand = str_replace(" ","-",trim($input['title'])). "-" .substr(md5($fileNameContent),6,6).'_'.time();
                 $filepath = ("$storage_path/$fileNameContentRand.$mimetype");
                 $img = Image::make($src)
-                ->resize(1200,1200)
+                ->resize(800,600)
                 ->encode($mimetype,100)
                 ->save(public_path($filepath));
                 $new_src=asset($filepath);
