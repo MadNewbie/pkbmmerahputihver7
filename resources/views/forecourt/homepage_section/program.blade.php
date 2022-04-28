@@ -53,10 +53,10 @@
     </div>
 </section>
 
-@section('css-page-before')
+@push('css-page-before')
 <link rel="stylesheet" href="{{asset('css/swiper/swiper-bundle.min.css')}}">
-@endsection
-@section('js-page-before')
+@endpush
+@push('js-page-before')
 <script src="{{asset('js/swiper/swiper-bundle.min.js')}}"></script>
 <script src="{{asset('js/section/program.js')}}"></script>
-@endsection
+@endpush

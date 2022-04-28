@@ -14,7 +14,9 @@ const mix = require('laravel-mix');
 mix
     // Forecourt
     .js('resources/js/app.js', 'public/js')
+    .js('resources/js/app-new.js', 'public/js')
     .js('resources/js/section/program.js', 'public/js/section')
+    .js('resources/js/section/berita.js', 'public/js/section')
 
     // Backyard
     // Role
@@ -32,6 +34,7 @@ mix
     .js('/resources/js/backyard/event/_form.js', 'public/js/backyard/event')
 
     // Forecourt
+    .postCss('resources/css/new-app.css', 'public/css/new-app.css')
     .postCss('resources/css/app.css', 'public/css/app.css')
     .postCss('resources/css/information.css', 'public/css/information.css')
     .postCss('resources/css/program.css', 'public/css/program.css')

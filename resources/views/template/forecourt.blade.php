@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{{asset('image/favicon.png')}}" type="image/x-icon">
     <title>{{env('APP_NAME')}}</title>
-    @yield('css-page-before')
+    @stack('css-page-before')
     <!-- Main CSS -->
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    @yield('css-page-after')
+    @stack('css-page-after')
     <!-- Font-Awesome -->
     <script src="https://kit.fontawesome.com/211179257a.js" crossorigin="anonymous"></script>
 </head>
@@ -72,10 +72,10 @@
     @yield('content')
     <footer class="footer section">
         @yield('footer-content')
-        <p class="footer__copy"><a class="footer__copyright-link" href="http://madnewbie.xyz">&#169; MadNewbie</a> 2022. All rights Reserved. Inspiration by Bedimcode.</p>
+        <p class="footer__copy">PKBM Merah Putih Kabupaten Malang &#169; All rights Reserved. 2022. Powered By <a class="footer__copyright-link" href="http://madnewbie.xyz">MadNewbie</a>. Inspiration by Bedimcode.</p>
     </footer>
-    @yield('js-page-before')
+    @stack('js-page-before')
     <script src="{{asset('js/app.js')}}"></script>
-    @yield('js-page-after')
+    @stack('js-page-after')
 </body>
 </html>

@@ -1,0 +1,197 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600;700&display=swap');
+:root {
+    --navbar-height : 4rem;
+    --red-color-base : #fa4a5e;
+    --red-color-first : #FB7786;
+    --red-color-second : #FDA5AF;
+    --red-color-third : #FED2D7;
+    --red-hue: 353;
+    --red-base-gradation: hsl(var(--red-hue), 95%, 64%);
+    --red-first-gradation: hsl(var(--red-hue), 94%, 73%);
+    --red-second-gradation: hsl(var(--red-hue), 96%, 82%);
+    --red-third-gradation: hsl(var(--red-hue), 96%, 91%);
+}
+
+/* Reuse class */
+.bg-red-base {
+    background: var(--red-base-gradation);
+}
+
+.bg-red-first {
+    background: var(--red-first-gradation);
+}
+
+.bg-red-second {
+    background: var(--red-second-gradation);
+}
+
+.bg-red-third {
+    background: var(--red-third-gradation);
+}
+
+.top__section {
+    padding-top: var(--navbar-height);
+}
+
+.text-light {
+    font-weight: 300;
+}
+
+.text-normal {
+    font-weight: 400;
+}
+
+.text-bold {
+    font-weight: 600;
+}
+
+.text-bolder {
+    font-weight: 700;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.button--flex {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+.section__title {
+    color: #000;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: var(--mb-2);
+    line-height: 140%;
+    background: var(--red-color-base);
+}
+
+.section {
+    padding: 5.5rem 0 1rem;
+}
+
+/* Base */
+* {
+    font-family: 'Dosis', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url("/image/seamless_stationary.jpg");
+    background-repeat: repeat;
+    background-size: 300px 300px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+/* Navbar */
+.navbar {
+    height: var(--navbar-height);
+}
+
+.navbar a{
+    color: #000;
+    text-transform: capitalize;
+    transition: .4s ease-in-out;
+}
+
+.navbar a:hover{
+    transform: scale(1.1);
+}
+
+.nav__locale-flag {
+    width: 25px;
+    vertical-align: baseline;
+}
+
+@media screen and (max-width: 767px) {
+    .nav__menu {
+        position: fixed;
+        background-color: var(--red-second-gradation);
+        width: 80%;
+        height: 100%;
+        top: 0;
+        right: -100%;
+        box-shadow: -2px 0 4px hsla(var(--hue), 24%, 15%, .1);
+        padding: 4rem 0 0 3rem;
+        border-radius: 1rem 0 0 1rem;
+        transition: .3s;
+        z-index: var(--z-fixed);
+    }
+}
+
+.nav__close {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    cursor: pointer;
+}
+
+/* ---Show Menu */
+.show-menu {
+    right: 0;
+}
+
+/* Home */
+.home {
+    height: 100vh;
+}
+
+.home__img{
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+}
+
+.home__slogan {
+    width: 100vh;
+}
+
+.home__slogan-container {
+    text-align: initial;
+    align-self: center;
+}
+
+.home__slogan-content {
+    font-size: 2rem;
+    line-height: 140%;;
+}
+
+/* Program */
+.program {
+    height: 100vh;
+}
+
+/* Kegiatan */
+.kegiatan {
+    background-color: var(--red-color-base);
+}
+
+/* Berita */
+.berita {
+    height: 100vh;
+}
+
+/* Testimoni */
+.card {
+    background-color: var(--red-third-gradation);
+}
+
+/* Kontak */
+.kontak__container {
+    background-color: var(--red-second-gradation);
+}
+
+.footer__data-contact-icon {
+    vertical-align: baseline;
+    font-size: 2rem;
+}

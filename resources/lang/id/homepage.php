@@ -4,6 +4,8 @@ return [
     'title' => [
         'program' => 'Program',
         'testimoni' => 'Testimoni',
+        'berita' => 'Berita Terkini',
+        'event' => 'Kegiatan Terbaru',
         'kontak' => 'Kontak',
     ],
     'subtitle' => [

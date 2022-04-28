@@ -37305,6 +37305,17 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/css/new-app.css":
+/*!***********************************!*\
+  !*** ./resources/css/new-app.css ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/css/program.css":
 /*!***********************************!*\
   !*** ./resources/css/program.css ***!
@@ -37403,13 +37414,14 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /***/ }),
 
 /***/ 0:
-/*!*****************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/css/app.css ./resources/css/information.css ./resources/css/program.css ./resources/css/gate.css ./resources/css/backyard.css ***!
-  \*****************************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/css/new-app.css ./resources/css/app.css ./resources/css/information.css ./resources/css/program.css ./resources/css/gate.css ./resources/css/backyard.css ***!
+  \*********************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /var/www/html/merahputih2/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /var/www/html/merahputih2/resources/css/new-app.css */"./resources/css/new-app.css");
 __webpack_require__(/*! /var/www/html/merahputih2/resources/css/app.css */"./resources/css/app.css");
 __webpack_require__(/*! /var/www/html/merahputih2/resources/css/information.css */"./resources/css/information.css");
 __webpack_require__(/*! /var/www/html/merahputih2/resources/css/program.css */"./resources/css/program.css");

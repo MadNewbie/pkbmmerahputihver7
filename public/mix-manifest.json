@@ -1,15 +1,18 @@
 {
     "/js/app.js": "/js/app.js",
+    "/css/new-app.css": "/css/new-app.css",
     "/css/app.css": "/css/app.css",
     "/css/information.css": "/css/information.css",
     "/css/program.css": "/css/program.css",
     "/css/gate.css": "/css/gate.css",
     "/css/backyard.css": "/css/backyard.css",
+    "/js/app-new.js": "/js/app-new.js",
     "/js/backyard/event/_form.js": "/js/backyard/event/_form.js",
     "/js/backyard/event/index.js": "/js/backyard/event/index.js",
     "/js/backyard/news/_form.js": "/js/backyard/news/_form.js",
     "/js/backyard/news/index.js": "/js/backyard/news/index.js",
     "/js/backyard/role/index.js": "/js/backyard/role/index.js",
     "/js/backyard/user/index.js": "/js/backyard/user/index.js",
+    "/js/section/berita.js": "/js/section/berita.js",
     "/js/section/program.js": "/js/section/program.js"
 }

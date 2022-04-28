@@ -19,6 +19,8 @@
     </section>
     @include('forecourt.homepage_section.program')
     @include('forecourt.homepage_section.testimoni')
+    @include('forecourt.homepage_section.event')
+    @include('forecourt.homepage_section.berita')
 </main>
 @endsection
 

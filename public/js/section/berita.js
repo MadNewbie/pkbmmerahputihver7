@@ -81,43 +81,50 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/section/program.js":
-/*!*****************************************!*\
-  !*** ./resources/js/section/program.js ***!
-  \*****************************************/
+/***/ "./resources/js/section/berita.js":
+/*!****************************************!*\
+  !*** ./resources/js/section/berita.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/* ---Program Swiper--- */
-var swiperProgram = new Swiper('.program__container', {
-  direction: 'horizontal',
-  cssMode: true,
-  loop: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  }
+document.addEventListener('DOMContentLoaded', function (event) {
+  methods.initBeritaSwiper();
 });
+var methods = {
+  initBeritaSwiper: function initBeritaSwiper() {
+    /* ---Berita Swiper--- */
+    var swiperBerita = new Swiper('.berita__container', {
+      direction: 'horizontal',
+      cssMode: true,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      }
+    });
+  }
+};
 
 /***/ }),
 
-/***/ 2:
-/*!***********************************************!*\
-  !*** multi ./resources/js/section/program.js ***!
-  \***********************************************/
+/***/ 3:
+/*!**********************************************!*\
+  !*** multi ./resources/js/section/berita.js ***!
+  \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/html/merahputih2/resources/js/section/program.js */"./resources/js/section/program.js");
+module.exports = __webpack_require__(/*! /var/www/html/merahputih2/resources/js/section/berita.js */"./resources/js/section/berita.js");
 
 
 /***/ })

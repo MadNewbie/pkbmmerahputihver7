@@ -81,43 +81,48 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/section/program.js":
-/*!*****************************************!*\
-  !*** ./resources/js/section/program.js ***!
-  \*****************************************/
+/***/ "./resources/js/app-new.js":
+/*!*********************************!*\
+  !*** ./resources/js/app-new.js ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-/* ---Program Swiper--- */
-var swiperProgram = new Swiper('.program__container', {
-  direction: 'horizontal',
-  cssMode: true,
-  loop: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  }
-});
+/* ---Show Menu--- */
+var navMenu = document.getElementById('nav-menu'),
+    navToggle = document.getElementById('nav-toggle'),
+    navClose = document.getElementById('nav-close');
+/* ---Menu Show--- */
+
+if (navToggle) {
+  navToggle.addEventListener('click', function () {
+    navMenu.classList.add('show-menu');
+  });
+}
+/* ---Menu Hidden--- */
+
+
+if (navClose) {
+  navClose.addEventListener('click', function () {
+    navMenu.classList.remove('show-menu');
+  });
+}
 
 /***/ }),
 
-/***/ 2:
-/*!***********************************************!*\
-  !*** multi ./resources/js/section/program.js ***!
-  \***********************************************/
+/***/ 1:
+/*!***************************************!*\
+  !*** multi ./resources/js/app-new.js ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/html/merahputih2/resources/js/section/program.js */"./resources/js/section/program.js");
+module.exports = __webpack_require__(/*! /var/www/html/merahputih2/resources/js/app-new.js */"./resources/js/app-new.js");
 
 
 /***/ })
