@@ -124,7 +124,7 @@ button {
         padding: 4rem 0 0 3rem;
         border-radius: 1rem 0 0 1rem;
         transition: .3s;
-        z-index: var(--z-fixed);
+        z-index: 100;
     }
 }
 
@@ -194,4 +194,11 @@ button {
 .footer__data-contact-icon {
     vertical-align: baseline;
     font-size: 2rem;
+}
+
+/* Breakpoint */
+@media screen and (min-width:767px) {
+    .nav__close {
+        display: none;
+    }
 }
