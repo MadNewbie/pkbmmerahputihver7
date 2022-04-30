@@ -112,6 +112,24 @@ if (navClose) {
     navMenu.classList.remove('show-menu');
   });
 }
+/* ---Change Background Header--- */
+
+
+function scrollHeader() {
+  var header = document.getElementById('header');
+
+  if (this.scrollY >= 80) {
+    header.classList.add('scroll-header');
+    header.classList.add('bg-red-second');
+    header.classList.remove('bg-red-base');
+  } else {
+    header.classList.remove('scroll-header');
+    header.classList.add('bg-red-base');
+    header.classList.remove('bg-red-second');
+  }
+}
+
+window.addEventListener('scroll', scrollHeader);
 
 /***/ }),
 

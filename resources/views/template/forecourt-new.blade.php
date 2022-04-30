@@ -17,7 +17,7 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg bg-red-second">
+    <nav class="navbar fixed-top navbar-expand-lg bg-red-base" id="header">
         <div class="container">
 
             <a class="navbar-brand" href="{{asset('/')}}">
@@ -30,7 +30,7 @@
                 </span>
             </button>
     
-            <div class="bg-red-second nav__menu" id="nav-menu">
+            <div class="nav__menu" id="nav-menu">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item ">
                         <a class="nav-link" href="{{route('information')}}"><i class="fa fa-info"></i> {{__('navbar.informasi')}}</a>
