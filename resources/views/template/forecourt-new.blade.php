@@ -21,7 +21,7 @@
         <div class="container">
 
             <a class="navbar-brand" href="{{asset('/')}}">
-                <img class="align-baseline" src="{{asset('image/logo.png')}}" alt="Logo PKBM Merah Putih" width="50px">
+                <img class="align-baseline mr-2" src="{{asset('image/logo.png')}}" alt="Logo PKBM Merah Putih" width="50px">
                 <span class="d-none d-lg-inline-block">PKBM Merah Putih </br> Kab. Malang</span>
             </a>
             <button class="navbar-toggler" id="nav-toggle" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

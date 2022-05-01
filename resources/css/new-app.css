@@ -174,7 +174,7 @@ button {
 
 /* Program */
 .program {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* Kegiatan */
@@ -202,9 +202,23 @@ button {
     font-size: 2rem;
 }
 
+/* Halaman Tim */
+.team__card {
+    box-shadow: 0 8px 16px -8px hsla(0, 0%, 0%, 0.4);
+}
+
 /* Breakpoint */
 @media screen and (min-width:767px) {
     .nav__close {
         display: none;
+    }
+
+    .team__card {
+        transition: .5s;
+    }
+
+    .team__card:hover {
+        transform: translateY(-2rem);
+        z-index: 1;
     }
 }

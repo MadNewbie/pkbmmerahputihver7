@@ -35,39 +35,16 @@ class HomeController extends Controller
 
     public function information()
     {
-        $active = 'information';
-        $submenus = [
-            [
-                'link'=>'sejarah',
-                'title' => __('submenu.information.sejarah'),
-            ],[
-                'link'=>'visi-misi',
-                'title' => __('submenu.information.visi-misi'),
-            ],[
-                'link'=>'legalitas',
-                'title' => __('submenu.information.legalitas'),
-            ]
-        ];
-        $data = 'info';
-        $options = compact('data','submenus','active');
-        return view('forecourt/information', $options);
+        return view('forecourt/new/information');
     }
 
     public function program()
     {
-        $active = 'program';
-        $submenus = [];
-        $data = 'info';
-        $options = compact('data','submenus','active');
-        return view('forecourt/program', $options);
+        return view('forecourt/new/program');
     }
 
     public function team()
     {
-        $active = 'team';
-        $submenus = [];
-        $data = 'info';
-        $options = compact('data','submenus','active');
-        return view('forecourt/team', $options);
+        return view('forecourt/new/team');
     }
 }

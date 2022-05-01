@@ -17,7 +17,7 @@
                             <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook team__card-socmed-icon"></i></a>
                             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram team__card-socmed-icon"></i></a>
                             <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter team__card-socmed-icon"></i></a>
-                            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin team__card-socmed-icon"></i></a>
+                            <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin team__card-socmed-icon"></i></a>
                         </div>
                         <div class="team__card-data">
                             <p class="team__card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque perferendis inventore reiciendis consectetur maxime, reprehenderit saepe illum ratione vitae explicabo ipsam, veniam voluptatem? Culpa quos saepe, nostrum exercitationem maiores eius.</p>
