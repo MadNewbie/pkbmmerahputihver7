@@ -11,8 +11,8 @@ class HomeController extends Controller
 {
     public function homepage()
     {
-        $recentEvents = Event::orderBy('created_at','asc')->limit(3)->get();
-        $recentNews = News::orderBy('created_at','asc')->limit(5)->get();
+        $recentEvents = Event::orderBy('created_at','desc')->limit(3)->get();
+        $recentNews = News::orderBy('created_at','desc')->limit(5)->get();
 
         $options = compact('recentEvents','recentNews');
 

@@ -207,6 +207,16 @@ button {
     box-shadow: 0 8px 16px -8px hsla(0, 0%, 0%, 0.4);
 }
 
+/* Pagination */
+.pagination {
+    font-size: 1.25rem;
+    background-color: var(--red-base-gradation);
+}
+
+.pagination>button {
+    background-color: var(--red-base-gradation);
+}
+
 /* Breakpoint */
 @media screen and (min-width:767px) {
     .nav__close {

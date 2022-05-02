@@ -122,7 +122,7 @@ Class NewsController extends BaseController
         $model->fill($input);
         $model->thumb_img = "/uploads/thumbs/".$filename;
         $model->content = $dom->saveHTML();
-        if(isset($input['isPublic']) || !$input['isPublic']){
+        if(!isset($input['isPublic']) || !$input['isPublic']){
             $model->isPublic = NewsLookup::IS_PUBLIC_NO;
         }
         if(!$id){

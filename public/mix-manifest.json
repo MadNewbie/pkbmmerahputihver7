@@ -13,6 +13,7 @@
     "/js/backyard/news/index.js": "/js/backyard/news/index.js",
     "/js/backyard/role/index.js": "/js/backyard/role/index.js",
     "/js/backyard/user/index.js": "/js/backyard/user/index.js",
+    "/js/news.js": "/js/news.js",
     "/js/section/berita.js": "/js/section/berita.js",
     "/js/section/program.js": "/js/section/program.js"
 }

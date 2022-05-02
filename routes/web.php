@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\News;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,13 @@ Route::get('/team', ['uses' => 'Forecourt\HomeController@team', 'as' => 'team'])
 
 // Language
 Route::get('/language/{lang}', ['uses' => 'Forecourt\LanguageController@changeLanguage', 'as' => 'language.change']);
+
+// News
+Route::group(['prefix' => 'news', 'as' => 'news.'], function() {
+    Route::post('/indexData', ['uses' => 'Forecourt\NewsController@indexData', 'as' => 'index.data']);
+    Route::get('/', ['uses' => 'Forecourt\NewsController@index', 'as' => 'index']);
+    Route::get('/show/{id}', ['uses' => 'Forecourt\NewsController@show', 'as' => 'show']);
+});
 
 // Auth
 Auth::routes(['register' => false]);
