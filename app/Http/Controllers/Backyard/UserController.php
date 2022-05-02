@@ -88,6 +88,9 @@ class UserController extends BaseController
     public function create()
     {
         $roles = Role::pluck('name','name')->all();
+        if(!Auth::user()->isDeveloper()){
+            unset($roles['Developer']);
+        }
         return self::makeView('create', compact('roles'));
     }
 
@@ -101,7 +104,9 @@ class UserController extends BaseController
         $user = User::find($id);
         $roles = Role::pluck('name','name')->all();
         $userRole = $user->roles->pluck('name', 'name')->all();
-
+        if(!Auth::user()->isDeveloper()){
+            unset($roles['Developer']);
+        }
         return self::makeView('edit', compact('user','roles','userRole'));
     }
 

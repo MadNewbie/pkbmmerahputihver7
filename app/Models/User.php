@@ -49,4 +49,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(News::class);
     }
+
+    public function isDeveloper()
+    {
+        $roles = json_decode(json_encode($this->getRoleNames()));
+        return is_numeric(array_search('Developer', $roles));
+    }
 }
