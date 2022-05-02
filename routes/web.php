@@ -30,6 +30,13 @@ Route::group(['prefix' => 'news', 'as' => 'news.'], function() {
     Route::get('/show/{id}', ['uses' => 'Forecourt\NewsController@show', 'as' => 'show']);
 });
 
+// Event
+Route::group(['prefix' => 'event', 'as' => 'event.'], function() {
+    Route::post('/indexData', ['uses' => 'Forecourt\EventController@indexData', 'as' => 'index.data']);
+    Route::get('/', ['uses' => 'Forecourt\EventController@index', 'as' => 'index']);
+    Route::get('/show/{id}', ['uses' => 'Forecourt\EventController@show', 'as' => 'show']);
+});
+
 // Auth
 Auth::routes(['register' => false]);
 Route::get('/logout', ['uses' => 'Auth\LoginController@logout', 'as' => 'logout']);

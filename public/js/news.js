@@ -2911,13 +2911,12 @@ var methods = {
 
               dataContainer.innerHTML = '';
               page = clickedPage ? clickedPage : 1;
-              console.log(page);
-              _context.next = 8;
+              _context.next = 7;
               return axios.post(url, {
                 page: page
               });
 
-            case 8:
+            case 7:
               response = _context.sent;
               data = response.data;
               newsData = data.data;
@@ -2979,7 +2978,7 @@ var methods = {
 
               _this.renderPagination(pagination);
 
-            case 14:
+            case 13:
             case "end":
               return _context.stop();
           }
@@ -3006,59 +3005,71 @@ var methods = {
       paginationLinks.push(prevLink);
     }
 
-    if (data.curPage == 1) {
-      paginationLinks.push(data.curPage);
-      var nextLink = document.createElement('button');
-      nextLink.append(data.nextPage);
-      nextLink.addEventListener('click', function (e) {
-        return _this2.getData(data.nextPage);
-      });
-      paginationLinks.push(nextLink);
-      var nextLink2 = document.createElement('button');
-      nextLink2.append(Number(data.nextPage) + 1);
-      nextLink2.addEventListener('click', function (e) {
-        return _this2.getData(Number(data.nextPage) + 1);
-      });
-      paginationLinks.push(nextLink2);
-    } else if (data.curPage == data.maxPage) {
-      var prevLink2 = document.createElement('button');
-      prevLink2.append(Number(data.prevPage) - 1);
-      prevLink2.addEventListener('click', function (e) {
-        return _this2.getData(Number(data.prevPage) - 1);
-      });
-      paginationLinks.push(prevLink2);
+    if (data.maxPage != 1) {
+      if (data.curPage == 1) {
+        paginationLinks.push(data.curPage);
+        var nextLink = document.createElement('button');
+        nextLink.append(data.nextPage);
+        nextLink.addEventListener('click', function (e) {
+          return _this2.getData(data.nextPage);
+        });
+        paginationLinks.push(nextLink);
 
-      var _prevLink = document.createElement('button');
+        if (data.maxPage >= Number(data.nextPage) + 1) {
+          var nextLink2 = document.createElement('button');
+          nextLink2.append(Number(data.nextPage) + 1);
+          nextLink2.addEventListener('click', function (e) {
+            return _this2.getData(Number(data.nextPage) + 1);
+          });
+          paginationLinks.push(nextLink2);
+        }
+      } else if (data.curPage == data.maxPage) {
+        if (Number(data.curPage) - 1 != 0) {
+          var prevLink2 = document.createElement('button');
+          prevLink2.append(Number(data.prevPage) - 1);
+          prevLink2.addEventListener('click', function (e) {
+            return _this2.getData(Number(data.prevPage) - 1);
+          });
+          paginationLinks.push(prevLink2);
+        }
 
-      _prevLink.append(data.prevPage);
+        var _prevLink = document.createElement('button');
 
-      _prevLink.addEventListener('click', function (e) {
-        return _this2.getData(data.prevPage);
-      });
+        _prevLink.append(data.prevPage);
 
-      paginationLinks.push(_prevLink);
-      paginationLinks.push(data.curPage);
-    } else {
-      var _prevLink2 = document.createElement('button');
+        _prevLink.addEventListener('click', function (e) {
+          return _this2.getData(data.prevPage);
+        });
 
-      _prevLink2.append(data.prevPage);
+        paginationLinks.push(_prevLink);
+        paginationLinks.push(data.curPage);
+      } else {
+        if (data.prevPage != data.curPage) {
+          var _prevLink2 = document.createElement('button');
 
-      _prevLink2.addEventListener('click', function (e) {
-        return _this2.getData(data.prevPage);
-      });
+          _prevLink2.append(data.prevPage);
 
-      paginationLinks.push(_prevLink2);
-      paginationLinks.push(data.curPage);
+          _prevLink2.addEventListener('click', function (e) {
+            return _this2.getData(data.prevPage);
+          });
 
-      var _nextLink = document.createElement('button');
+          paginationLinks.push(_prevLink2);
+        }
 
-      _nextLink.append(data.nextPage);
+        paginationLinks.push(data.curPage);
 
-      _nextLink.addEventListener('click', function (e) {
-        return _this2.getData(data.nextPage);
-      });
+        if (data.nextPage != data.curPage) {
+          var _nextLink = document.createElement('button');
 
-      paginationLinks.push(_nextLink);
+          _nextLink.append(data.nextPage);
+
+          _nextLink.addEventListener('click', function (e) {
+            return _this2.getData(data.nextPage);
+          });
+
+          paginationLinks.push(_nextLink);
+        }
+      }
     }
 
     if (data.curPage != data.maxPage) {

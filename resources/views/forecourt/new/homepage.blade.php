@@ -78,20 +78,24 @@
             <div class="container">
                 <div class="row my-3">
                     <h2 class="mx-auto px-2 bg-red-base text-bolder">
-                        {!!__('homepage.title.event')!!}
+                        <a href="{{route('event.index')}}" class="text-decoration-none text-dark">
+                            {!!__('homepage.title.event')!!}
+                        </a>
                     </h2>
                 </div>
                 <div class="row">
                 @if(count($recentEvents)!=0)
                     @foreach($recentEvents as $event)
                     <div class="col-lg-4">
-                        <div class="row py-3">
-                            <img src="<?= asset($event->thumb_img) ?>" alt="kegiatan__thumbs" class="col-lg-6">
-                            <div class="kegiatan__data col-lg-6">
-                                <h3 class="kegiatan__title text-bold">{{$event->title}}</h3>
-                                <?=strip_tags(str_replace("</p>","&nbsp;",$event->content))?>
+                        <a href="{{route('event.show',$event->id)}}" class="text-decoration-none text-dark">
+                            <div class="row py-3">
+                                <img src="<?= asset($event->thumb_img) ?>" alt="kegiatan__thumbs" class="col-lg-6">
+                                <div class="kegiatan__data col-lg-6">
+                                    <h3 class="kegiatan__title text-bold">{{$event->title}}</h3>
+                                    <?=strip_tags(str_replace("</p>","&nbsp;",$event->content))?>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     @endforeach
                 @else
@@ -104,7 +108,9 @@
     <section class="section berita">
         <div class="row mx-0 my-3">
             <h2 class="section__title mx-auto px-2">
-                {!!__('homepage.title.berita')!!}
+                <a href="{{route('news.index')}}" class="text-decoration-none text-dark">
+                    {!!__('homepage.title.berita')!!}
+                </a>
             </h2>
         </div>
         <div class="row mx-0">
@@ -114,12 +120,14 @@
                     <div class="carousel-inner">
                         @foreach($recentNews as $i=>$news)
                         <div class="carousel-item <?= $i==0 ? "active" : "" ?>">
-                            <div class="row mx-0">
-                                <img class="rounded col-lg-6 pb-3 pb-lg-0" src="{{$news->thumb_img}}" alt="Berita slide" style="max-height:400px">
-                                <div class="berita__carousel-data-container col-lg-6 bg-red-third rounded py-3">
-                                    <?=strip_tags(str_replace("</p>","&nbsp;",$news->content))?>
+                            <a href="{{route('news.show',$news->id)}}" class="text-decoration-none text-dark">
+                                <div class="row mx-0">
+                                    <img class="rounded col-lg-6 pb-3 pb-lg-0" src="{{$news->thumb_img}}" alt="Berita slide" style="max-height:400px">
+                                    <div class="berita__carousel-data-container col-lg-6 bg-red-third rounded py-3">
+                                        <?=strip_tags(str_replace("</p>","&nbsp;",$news->content))?>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                         @endforeach
                     </div>

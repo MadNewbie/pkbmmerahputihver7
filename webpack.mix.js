@@ -18,6 +18,7 @@ mix
     .js('resources/js/section/program.js', 'public/js/section')
     .js('resources/js/section/berita.js', 'public/js/section')
     .js('resources/js/news.js', 'public/js')
+    .js('resources/js/event.js', 'public/js')
 
     // Backyard
     // Role

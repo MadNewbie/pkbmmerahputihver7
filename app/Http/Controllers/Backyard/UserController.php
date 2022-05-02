@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 use DB;
 use Hash;
+use Auth;
 
 class UserController extends BaseController
 {

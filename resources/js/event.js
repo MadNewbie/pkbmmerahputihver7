@@ -1,5 +1,5 @@
 const axios = require('axios');
-const _data = window[`_newsIndexData`];
+const _data = window[`_eventIndexData`];
 
 document.addEventListener('DOMContentLoaded', (event) => {
     methods.getData();
@@ -16,7 +16,7 @@ const methods = {
             page: page,
         });
         const data = response.data;
-        const newsData = data.data;
+        const eventData = data.data;
         const pagination = {
             curPage: data.curPage,
             dataCount: data.dataCount,
@@ -24,53 +24,53 @@ const methods = {
             nextPage: data.nextPage,
             prevPage: data.prevPage
         }
-        // render news card
-        newsData.forEach(data => {
-            const newsThumbImg = document.createElement('img');
-            newsThumbImg.setAttribute('src', data.thumb_img);
-            newsThumbImg.classList.add('w-100');
-            newsThumbImg.style.maxHeight = '300px';
-            const newsContent = document.createElement('div');
-            newsContent.classList.add('row');
-            newsContent.classList.add('text-dark');
-            newsContent.append(data.content);
-            const newsTitle = document.createElement('h4');
-            newsTitle.classList.add('mx-auto');
-            newsTitle.classList.add('text-bold');
-            newsTitle.classList.add('text-dark');
-            newsTitle.append(data.title);
-            const newsTitleRow = document.createElement('div');
-            newsTitleRow.classList.add('row');
-            newsTitleRow.append(newsTitle);
-            const newsContainer = document.createElement('div');
-            newsContainer.classList.add('container');
-            newsContainer.append(newsTitleRow);
-            newsContainer.append(newsContent);
+        // render event card
+        eventData.forEach(data => {
+            const eventThumbImg = document.createElement('img');
+            eventThumbImg.setAttribute('src', data.thumb_img);
+            eventThumbImg.classList.add('w-100');
+            eventThumbImg.style.maxHeight = '300px';
+            const eventContent = document.createElement('div');
+            eventContent.classList.add('row');
+            eventContent.classList.add('text-dark');
+            eventContent.append(data.content);
+            const eventTitle = document.createElement('h4');
+            eventTitle.classList.add('mx-auto');
+            eventTitle.classList.add('text-bold');
+            eventTitle.classList.add('text-dark');
+            eventTitle.append(data.title);
+            const eventTitleRow = document.createElement('div');
+            eventTitleRow.classList.add('row');
+            eventTitleRow.append(eventTitle);
+            const eventContainer = document.createElement('div');
+            eventContainer.classList.add('container');
+            eventContainer.append(eventTitleRow);
+            eventContainer.append(eventContent);
             const col8Card = document.createElement('div');
             col8Card.classList.add('col-lg-8');
-            col8Card.append(newsContainer);
+            col8Card.append(eventContainer);
             const col4Card = document.createElement('div');
             col4Card.classList.add('col-lg-4');
             col4Card.classList.add('mb-2');
-            col4Card.append(newsThumbImg);
+            col4Card.append(eventThumbImg);
             const cardContainer = document.createElement('div');
             cardContainer.classList.add('container');
             cardContainer.classList.add('row');
             cardContainer.append(col4Card);
             cardContainer.append(col8Card);
-            const cardNews = document.createElement('div');
-            cardNews.classList.add('row');
-            cardNews.classList.add('my-2');
-            cardNews.classList.add('py-2');
-            cardNews.classList.add('card');
-            cardNews.append(cardContainer);
-            const newsLinkDetail = document.createElement('a');
-            newsLinkDetail.classList.add('strecthed-link');
-            newsLinkDetail.classList.add('card-block');
-            newsLinkDetail.classList.add('text-decoration-none');
-            newsLinkDetail.setAttribute('href',_data.routeNewsShow.replace(999, data.id));
-            newsLinkDetail.append(cardNews);
-            dataContainer.append(newsLinkDetail);
+            const cardEvent = document.createElement('div');
+            cardEvent.classList.add('row');
+            cardEvent.classList.add('my-2');
+            cardEvent.classList.add('py-2');
+            cardEvent.classList.add('card');
+            cardEvent.append(cardContainer);
+            const eventLinkDetail = document.createElement('a');
+            eventLinkDetail.classList.add('strecthed-link');
+            eventLinkDetail.classList.add('card-block');
+            eventLinkDetail.classList.add('text-decoration-none');
+            eventLinkDetail.setAttribute('href',_data.routeEventShow.replace(999, data.id));
+            eventLinkDetail.append(cardEvent);
+            dataContainer.append(eventLinkDetail);
         });
         // render pagination
         this.renderPagination(pagination);
@@ -89,7 +89,7 @@ const methods = {
             prevLink.addEventListener('click',(e) => this.getData(data.prevPage));
             paginationLinks.push(prevLink);
         }
-        if(data.maxPage!=1){
+        if(data.maxPage != 1) {
             if (data.curPage == 1) {
                 paginationLinks.push(data.curPage);
                 const nextLink = document.createElement('button');
@@ -103,7 +103,7 @@ const methods = {
                     paginationLinks.push(nextLink2);
                 }
             } else if (data.curPage == data.maxPage) {
-                if(Number(data.curPage) -1 != 0){
+                if(Number(data.curPage) - 2 != 0){
                     const prevLink2 = document.createElement('button');
                     prevLink2.append(Number(data.prevPage) - 1);
                     prevLink2.addEventListener('click',(e) => this.getData(Number(data.prevPage)-1));
@@ -115,14 +115,14 @@ const methods = {
                 paginationLinks.push(prevLink);
                 paginationLinks.push(data.curPage);
             } else {
-                if(data.prevPage != data.curPage) {
+                if(data.prevPage != data.curPage){
                     const prevLink = document.createElement('button');
                     prevLink.append(data.prevPage);
                     prevLink.addEventListener('click',(e) => this.getData(data.prevPage));
                     paginationLinks.push(prevLink);
                 }
                 paginationLinks.push(data.curPage);
-                if(data.nextPage != data.curPage){
+                if(data.nextPage != data.curPage) {
                     const nextLink = document.createElement('button');
                     nextLink.append(data.nextPage);
                     nextLink.addEventListener('click',(e) => this.getData(data.nextPage));
