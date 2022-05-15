@@ -35,6 +35,9 @@ mix
     .js('/resources/js/backyard/event/index.js', 'public/js/backyard/event')
     .js('/resources/js/backyard/event/_form.js', 'public/js/backyard/event')
 
+    // Program
+    .js('/resources/js/backyard/program/index.js', 'public/js/backyard/program')
+
     // Forecourt
     .postCss('resources/css/new-app.css', 'public/css/new-app.css')
     .postCss('resources/css/app.css', 'public/css/app.css')

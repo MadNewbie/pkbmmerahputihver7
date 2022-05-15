@@ -61,4 +61,9 @@ Route::group(['middleware' => ['web','auth','acl'], 'prefix' => 'backyard', 'as'
     Route::get('events/makePublicYes/{id}', ['uses' => 'Backyard\EventController@makeIsPublicYes', 'as' => 'event.public.yes']);
     Route::get('events/makePublicNo/{id}', ['uses' => 'Backyard\EventController@makeIsPublicNo', 'as' => 'event.public.no']);
     Route::resource('events','Backyard\EventController', ['names' => 'event']);
+    // Program
+    Route::get('programs/indexData', ['uses' => 'Backyard\ProgramController@indexData', 'as' => 'program.index.data']);
+    Route::get('programs/makePublicYes/{id}', ['uses' => 'Backyard\ProgramController@makeIsPublicYes', 'as' => 'program.public.yes']);
+    Route::get('programs/makePublicNo/{id}', ['uses' => 'Backyard\ProgramController@makeIsPublicNo', 'as' => 'program.public.no']);
+    Route::resource('programs','Backyard\ProgramController', ['names' => 'program']);
 });
