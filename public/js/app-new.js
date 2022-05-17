@@ -120,16 +120,14 @@ function scrollHeader() {
 
   if (this.scrollY >= 80) {
     header.classList.add('scroll-header');
-    header.classList.add('bg-red-second');
-    header.classList.remove('bg-red-base');
+    header.classList.add('bg-second');
+    header.classList.remove('bg-main');
   } else {
     header.classList.remove('scroll-header');
-    header.classList.add('bg-red-base');
-    header.classList.remove('bg-red-second');
+    header.classList.add('bg-main');
+    header.classList.remove('bg-second');
   }
-}
-
-window.addEventListener('scroll', scrollHeader);
+} // window.addEventListener('scroll', scrollHeader)
 
 /***/ }),
 

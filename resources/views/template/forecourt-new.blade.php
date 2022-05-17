@@ -17,7 +17,7 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg bg-red-base" id="header">
+    <nav class="navbar fixed-top navbar-expand-lg bg-main" id="header">
         <div class="container">
 
             <a class="navbar-brand" href="{{asset('/')}}">
@@ -25,12 +25,12 @@
                 <span class="d-none d-lg-inline-block">PKBM Merah Putih </br> Kab. Malang</span>
             </a>
             <button class="navbar-toggler" id="nav-toggle" type="button" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">
+                <span class="navbar-toggler-icon text-light">
                     <i class="fas fa-bars"></i>
                 </span>
             </button>
     
-            <div class="nav__menu" id="nav-menu">
+            <div class="nav__menu bg-main" id="nav-menu">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item ">
                         <a class="nav-link" href="{{route('information')}}"><i class="fa fa-info"></i> {{__('navbar.informasi')}}</a>
@@ -51,7 +51,7 @@
                         </li>
                     <?php endif ?>
                 </ul>
-                <div class="nav__close" id="nav-close">
+                <div class="nav__close text-light" id="nav-close">
                     <i class="fa fa-xmark"></i>
                 </div>
             </div>
@@ -59,9 +59,9 @@
     </nav>
     @yield('content')
     <!-- Footer -->
-    <footer class="footer bg-red-second">
+    <footer class="footer bg-main">
         <div class="text-center">
-            <p class="footer__copy m-0">All rights Reserved PKBM Merah Putih Kabupaten Malang &#169;. 2022. Powered By <a class="footer__copyright-link" href="http://madnewbie.xyz">MadNewbie</a>. Inspiration by Bedimcode.</p>
+            <p class="footer__copy m-0 text-light">All rights Reserved PKBM Merah Putih Kabupaten Malang &#169;. 2022. Powered By <a class="footer__copyright-link" href="http://madnewbie.xyz">MadNewbie</a>. Inspiration by Bedimcode.</p>
         </div>
     </footer>
     @stack('js-page-before')

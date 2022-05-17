@@ -8,6 +8,12 @@ $menus = [
         'type_icon' => 'fab',
     ],
     [
+        'title' => 'Program',
+        'route' => 'backyard.program.index',
+        'icon' => 'book',
+        'type_icon' => 'fas',
+    ],
+    [
         'title' => 'News',
         'route' => 'backyard.news.index',
         'icon' => 'newspaper',

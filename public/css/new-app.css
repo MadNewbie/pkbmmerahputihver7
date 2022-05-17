@@ -1,32 +1,63 @@
 @import url(https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600;700&display=swap);/* Google Font */
 :root {
     --navbar-height : 4rem;
-    --red-color-base : #fa4a5e;
-    --red-color-first : #FB7786;
-    --red-color-second : #FDA5AF;
-    --red-color-third : #FED2D7;
-    --red-hue: 353;
-    --red-base-gradation: hsl(var(--red-hue), 95%, 64%);
-    --red-first-gradation: hsl(var(--red-hue), 94%, 73%);
-    --red-second-gradation: hsl(var(--red-hue), 96%, 82%);
-    --red-third-gradation: hsl(var(--red-hue), 96%, 91%);
+    --color-main : #a61c3c;
+    --color-second : #C20114;
+    --color-third : #960200;
+    --color-forth : #C42348;
+    --color-first-variation : #bd8184;
+    --color-second-variation : #fff6f6;
+    --color-third-variation : #ead3c1;
+    --color-dark : #574142;
 }
 
 /* Reuse class */
-.bg-red-base {
-    background: var(--red-base-gradation);
+.bg-main {
+    background: var(--color-main);
 }
 
-.bg-red-first {
-    background: var(--red-first-gradation);
+.bg-second {
+    background: var(--color-second);
 }
 
-.bg-red-second {
-    background: var(--red-second-gradation);
+.bg-third {
+    background: var(--color-third);
 }
 
-.bg-red-third {
-    background: var(--red-third-gradation);
+.bg-forth {
+    background: var(--color-forth);
+}
+
+.bg-first-variation {
+    background: var(--color-first-variation);
+}
+
+.bg-second-variation {
+    background: var(--color-second-variation);
+}
+
+.bg-third-variation {
+    background: var(--color-third-variation);
+}
+
+.bg-dark {
+    background: var(--color-dark);
+}
+
+.text-theme-main {
+    color: var(--color-dark);
+}
+
+.text-theme-second {
+    color: var(--color-third-variation);
+}
+
+.text-theme-third {
+    color: var(--color-second-variation);
+}
+
+.text-theme-forth {
+    color: var(--color-main);
 }
 
 .top__section {
@@ -66,7 +97,6 @@
     font-weight: 600;
     margin-bottom: var(--mb-2);
     line-height: 140%;
-    background: var(--red-color-base);
 }
 
 .section {
@@ -99,7 +129,7 @@ button {
 }
 
 .navbar a{
-    color: #000;
+    color: var(--color-second-variation);
     text-transform: capitalize;
     transition: .4s ease-in-out;
 }
@@ -116,7 +146,6 @@ button {
 @media screen and (max-width: 767px) {
     .nav__menu {
         position: fixed;
-        background-color: var(--red-second-gradation);
         width: 80%;
         height: 100%;
         top: 0;
@@ -180,7 +209,7 @@ button {
 
 /* Kegiatan */
 .kegiatan {
-    background-color: var(--red-color-base);
+    background-color: var(--color-main);
 }
 
 /* Berita */
@@ -190,12 +219,12 @@ button {
 
 /* Testimoni */
 .card {
-    background-color: var(--red-third-gradation);
+    background-color: var(--color-third-variation);
 }
 
 /* Kontak */
 .kontak__container {
-    background-color: var(--red-second-gradation);
+    background-color: var(--color-third-variation);
 }
 
 .footer__data-contact-icon {
@@ -211,15 +240,22 @@ button {
 /* Pagination */
 .pagination {
     font-size: 1.25rem;
-    background-color: var(--red-base-gradation);
+    background-color: var(--color-main);
 }
 
 .pagination>button {
-    background-color: var(--red-base-gradation);
+    background-color: var(--color-main);
 }
 
 /* Breakpoint */
 @media screen and (min-width:767px) {
+    .home__content {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+    }
+
     .nav__close {
         display: none;
     }

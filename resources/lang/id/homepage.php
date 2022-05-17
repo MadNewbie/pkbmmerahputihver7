@@ -15,7 +15,16 @@ return [
             'alamat' => 'Alamat',
         ],
     ],
-    'ajakan' => 'Tertarik untuk menjadi bagian dari kami?<br>Daftarkan dirimu segera',
+    'ajakan' => 'Tertarik untuk menjadi bagian dari kami? Daftarkan dirimu segera',
+    'persyaratan' => [
+        'judul' => 'Persyaratan Pendaftaran',
+        'rapor' => 'Fotokopi Rapor Terakhir',
+        'ijazah' => 'Fotokopi Ijazah Terakhir yang dilegalisir',
+        'ktp_ortu' => 'Fotokopi KTP WB dan Wali',
+        'kk' => 'Fotokopi Kartu Keluarga',
+        'foto' => 'Pas Foto 3x4 (Hitam Putih)',
+        'akte' => 'Fotokopi Akta Kelahiran',
+    ],
     'button' => [
         'info' => 'Informasi Selengkapnya',
         'detil_program' => 'Detil Program >>>',
