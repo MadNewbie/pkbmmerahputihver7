@@ -27,7 +27,7 @@
 <body class="sidebar-mini layout-fixed layout-navbar-fixed">
     <div class="wrapper">
         <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand bg-danger">
+        <nav class="main-header navbar navbar-expand bg-main">
             <!-- Left navbar group -->
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -51,9 +51,9 @@
         </nav>
 
         <!-- Sidebar Container-->
-        <aside class="main-sidebar sidebar-dark-primary elevation-4 bg-danger">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4 bg-main">
             <!-- Brand Logo -->
-            <a href="/" class="brand-link bg-danger">
+            <a href="/" class="bg-main brand-link">
                 <img class="brand-image elevation-3" src="{{asset('image/logo.png')}}" alt="log-merah-putih">
                 <span class="brand-text font-weight-light">
                     PKBM Merah Putih

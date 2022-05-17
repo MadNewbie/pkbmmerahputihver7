@@ -9,14 +9,26 @@
 </div>
 <div class="row">
     <div class="form-group col-xs-12 col-sm-10">
+        {!! Form::label('isPublic', 'Publikasi Program?') !!}
+        {!! Form::select('isPublic', $isPublicSelect, null,['class' => 'form-control']) !!}
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-xs-12 col-sm-10">
         {!! Form::label('thumb_img', 'Gambar Thumbnail') !!}
         {!! Form::file('thumb_img', ['class' => 'form-control']) !!}
     </div>
 </div>
 <div class="row">
     <div class="form-group col-xs-12 col-sm-10">
-        {!! Form::label('isPublic', 'Publikasi Artikel?') !!}
-        {!! Form::select('isPublic', $isPublicSelect, null,['class' => 'form-control']) !!}
+        {!! Form::label('materi_path', 'Contoh Mater') !!}
+        {!! Form::file('materi_path', ['class' => 'form-control']) !!}
+    </div>
+</div>
+<div class="row">
+    <div class="form-group col-xs-12 col-sm-10">
+        {!! Form::label('schedule_path', 'Jadwal Kelas') !!}
+        {!! Form::file('schedule_path', ['class' => 'form-control']) !!}
     </div>
 </div>
 <div class="row">

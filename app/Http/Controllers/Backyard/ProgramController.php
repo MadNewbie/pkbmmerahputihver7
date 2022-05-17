@@ -77,6 +77,8 @@ class ProgramController extends BaseController
         $rules = [
             'title' => 'required',
             'thumb_img' => 'image',
+            'materi_path' => 'mimes:pdf',
+            'schedule_path' => 'mimes:pdf',
             'description' => 'required',
         ];
 
@@ -93,9 +95,27 @@ class ProgramController extends BaseController
         $filename = $filename.".".$rawThumbImg->getClientOriginalExtension();
         $rawThumbImg->move(public_path("/uploads/thumbs"),$filename);
 
+        //Proses input file contoh materi
+        $rawMateri = $request->file('materi_path');
+        $filenameMateri[] = str_replace(" ","_",trim($input['title']));
+        $filenameMater[] = "materi_".time();
+        $filenameMateri = implode("_",$filenameMateri);
+        $filenameMateri = $filenameMateri.".".$rawMateri->extension();
+        $rawMateri->move(public_path("/uploads/materi"),$filenameMateri);
+
+        //Proses input file contoh schedule
+        $rawSchedule = $request->file('schedule_path');
+        $filenameSchedule[] = str_replace(" ","_",trim($input['title']));
+        $filenameSchedule[] = "materi_".time();
+        $filenameSchedule = implode("_",$filenameSchedule);
+        $filenameSchedule = $filenameSchedule.".".$rawSchedule->extension();
+        $rawSchedule->move(public_path("/uploads/schedules"),$filenameSchedule);
+
         $model = $id ? Program::find($id) : new Program();
         $model->fill($input);
         $model->thumb_img = "/uploads/thumbs/".$filename;
+        $model->materi_path = "/uploads/materi/".$filenameMateri;
+        $model->schedule_path = "/uploads/schedules/".$filenameSchedule;
         if(!isset($input['isPublic']) || !$input['isPublic'])
         {
             $model->isPublic = ProgramLookup::IS_PUBLIC_NO;

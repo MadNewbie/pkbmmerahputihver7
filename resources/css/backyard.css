@@ -1,5 +1,93 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600;700&display=swap');
+:root {
+    --navbar-height : 4rem;
+    --color-main : #a61c3c;
+    --color-second : #C20114;
+    --color-third : #960200;
+    --color-forth : #C42348;
+    --color-first-variation : #bd8184;
+    --color-second-variation : #fff6f6;
+    --color-third-variation : #ead3c1;
+    --color-dark : #574142;
+}
+
+/* Reuse class */
+.bg-main {
+    background: var(--color-main);
+}
+
+.bg-second {
+    background: var(--color-second);
+}
+
+.bg-third {
+    background: var(--color-third);
+}
+
+.bg-forth {
+    background: var(--color-forth);
+}
+
+.bg-first-variation {
+    background: var(--color-first-variation);
+}
+
+.bg-second-variation {
+    background: var(--color-second-variation);
+}
+
+.bg-third-variation {
+    background: var(--color-third-variation);
+}
+
+.bg-dark {
+    background: var(--color-dark);
+}
+
+.text-theme-main {
+    color: var(--color-dark);
+}
+
+.text-theme-second {
+    color: var(--color-third-variation);
+}
+
+.text-theme-third {
+    color: var(--color-second-variation);
+}
+
+.text-theme-forth {
+    color: var(--color-main);
+}
+
+.text-light {
+    font-weight: 300;
+}
+
+.text-normal {
+    font-weight: 400;
+}
+
+.text-bold {
+    font-weight: 600;
+}
+
+.text-bolder {
+    font-weight: 700;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+.brand-link {
+    background-color: var(--color-main) !important;
+}
+
 .nav-link {
-    color: #fff;
+    color: #fff !important;
 }
 .nav-link.active {
     background-color: #fff !important;

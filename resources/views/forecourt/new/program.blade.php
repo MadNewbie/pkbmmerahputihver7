@@ -24,13 +24,13 @@
                                 </div>
                                 <div class="container">
                                     <div class="row justify-content-around">
-                                        <a href="#" target="_blank" class="btn btn-light col-3">
+                                        <a href="<?=isset($program->materi_path)?$program->materi_path:'#'?>" target="_blank" class="btn btn-light col-3">
                                             <i class="fa fa-book program__card-content-icon"></i> Contoh Materi
                                         </a>
-                                        <a href="#" target="_blank" class="btn btn-light col-3">
+                                        <a href="<?=isset($program->schedule_path)?$program->schedule_path:'#'?>" target="_blank" class="btn btn-light col-3">
                                             <i class="fa-solid fa-calendar-days program__card-content-icon"></i> Jadwal
                                         </a>
-                                        <a href="#" target="_blank" class="btn btn-light col-3">
+                                        <a href="<?=Route('team')?>" target="_blank" class="btn btn-light col-3">
                                             <i class="fa-solid fa-people-group program__card-content-icon"></i> Tim Pengajar
                                         </a>
                                     </div>
