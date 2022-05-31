@@ -10,7 +10,7 @@
 @endsection
 
 @section('content')
-{!! Form::model($user, ['route' => [$routePrefix.'update', $role->id], 'method' => 'PATCH']) !!}
+{!! Form::model($user, ['route' => [$routePrefix.'update', $user->id], 'method' => 'PATCH']) !!}
     @include($routePrefix.'_form')
 {!! Form::close() !!}
 @endsection

@@ -69,8 +69,8 @@ class UserController extends BaseController
         if(!$id){
             $rules['password'] = 'required|confirmed|min:6';
         }
-        $rules['username'] = $id ? 'required|unique:users,username' : 'required';
-        $rules['email'] = $id ? 'required|email|unique:users,email' : 'required|email';
+        $rules['username'] = !$id ? 'required|unique:users,username' : 'required';
+        $rules['email'] = !$id ? 'required|email|unique:users,email' : 'required|email';
         $this->validate($request,$rules);
         $res = true;
         $input = $request->all();
