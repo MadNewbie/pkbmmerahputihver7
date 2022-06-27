@@ -262,6 +262,17 @@
                                 </div>
                             </div>
                         </a>
+                        <a class="text-reset" href="https://www.youtube.com/channel/UCQD0GwIsXpEjGrgVMKUhl5g">
+                            <div class="row">
+                                <div class="col-2">
+                                    <i class="fa-brands fa-youtube footer__data-contact-icon"></i>
+                                </div>
+                                <div class="col-8">
+                                    <h3 class="footer__data-contact-title">{!!__('homepage.subtitle.kontak.youtube')!!}</h3>
+                                    <span class="footer__data-contact-subtitle">PKBM MERAH PUTIH KARANGPLOSO</span>
+                                </div>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>

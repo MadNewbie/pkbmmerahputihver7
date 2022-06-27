@@ -6,13 +6,14 @@ return [
         'testimoni' => 'Testimoni',
         'berita' => 'Berita Terkini',
         'event' => 'Kegiatan Terbaru',
-        'kontak' => 'Kontak',
+        'kontak' => 'Hubungi Kami Di',
     ],
     'subtitle' => [
         'kontak' => [
             'telepon' => 'Telepon',
             'email' => 'Alamat E-mail',
             'alamat' => 'Alamat',
+            'youtube' => 'Kanal Youtube',
         ],
     ],
     'ajakan' => 'Tertarik untuk menjadi bagian dari kami? Daftarkan dirimu segera',

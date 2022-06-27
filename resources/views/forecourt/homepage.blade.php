@@ -43,7 +43,7 @@
 
                 <div>
                     <h3 class="footer__data-contact-title">{!!__('homepage.subtitle.kontak.telepon')!!}</h3>
-                    <span class="footer__data-contact-subtitle">08123-4567-8989</span>
+                    <span class="footer__data-contact-subtitle">0811-3046-609</span>
                 </div>
             </div>
             <div class="footer__data-contact">
@@ -75,6 +75,9 @@
                     </a>
                     <a href="http://www.linkedin.com" class="footer__data-socmed-link">
                         <i class="fa-brands fa-linkedin footer__data-socmed-icon"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCQD0GwIsXpEjGrgVMKUhl5g" class="footer__data-socmed-link">
+                        <i class="fa-brands fa-youtube footer__data-socmed-icon"></i>
                     </a>
                 </div>
             </div>

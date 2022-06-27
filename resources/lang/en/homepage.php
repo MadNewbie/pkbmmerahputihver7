@@ -6,13 +6,14 @@ return [
         'testimoni' => 'Testimonial',
         'berita' => 'News',
         'event' => 'Events',
-        'kontak' => 'Contact',
+        'kontak' => 'Get Touch With Us On',
     ],
     'subtitle' => [
         'kontak' => [
             'telepon' => 'Telephone',
             'email' => 'E-mail',
             'alamat' => 'Address',
+            'youtube' => 'Channel Youtube',
         ],
     ],
     'ajakan' => 'Come Join With Us',
