@@ -119,9 +119,15 @@ class ProgramController extends BaseController
 
         $model = $id ? Program::find($id) : new Program();
         $model->fill($input);
-        $model->thumb_img = "/uploads/thumbs/".$filename;
-        $model->materi_path = "/uploads/materi/".$filenameMateri;
-        $model->schedule_path = "/uploads/schedules/".$filenameSchedule;
+        if(isset($filename)){
+            $model->thumb_img = "/uploads/thumbs/".$filename;
+        }
+        if(isset($filenameMateri)){
+            $model->materi_path = "/uploads/materi/".$filenameMateri;
+        }
+        if(isset($filenameSchedule)){
+            $model->schedule_path = "/uploads/schedules/".$filenameSchedule;
+        }
         if(!isset($input['isPublic']) || !$input['isPublic'])
         {
             $model->isPublic = ProgramLookup::IS_PUBLIC_NO;
