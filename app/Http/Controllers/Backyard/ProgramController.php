@@ -88,28 +88,34 @@ class ProgramController extends BaseController
         $input = $request->all();
 
         //Proses input thumbnail image
-        $rawThumbImg = $request->file('thumb_img');
-        $filename[] = str_replace(" ","-",trim($input['title']));
-        $filename[] = "thumbs-".time();
-        $filename = implode("-",$filename);
-        $filename = $filename.".".$rawThumbImg->getClientOriginalExtension();
-        $rawThumbImg->move(public_path("/uploads/thumbs"),$filename);
+        if(!empty($request->file('thumb_img'))){
+            $rawThumbImg = $request->file('thumb_img');
+            $filename[] = str_replace(" ","-",trim($input['title']));
+            $filename[] = "thumbs-".time();
+            $filename = implode("-",$filename);
+            $filename = $filename.".".$rawThumbImg->getClientOriginalExtension();
+            $rawThumbImg->move(public_path("/uploads/thumbs"),$filename);
+        }
 
         //Proses input file contoh materi
-        $rawMateri = $request->file('materi_path');
-        $filenameMateri[] = str_replace(" ","_",trim($input['title']));
-        $filenameMater[] = "materi_".time();
-        $filenameMateri = implode("_",$filenameMateri);
-        $filenameMateri = $filenameMateri.".".$rawMateri->extension();
-        $rawMateri->move(public_path("/uploads/materi"),$filenameMateri);
+        if(!empty($request->file('materi_path'))){
+            $rawMateri = $request->file('materi_path');
+            $filenameMateri[] = str_replace(" ","_",trim($input['title']));
+            $filenameMater[] = "materi_".time();
+            $filenameMateri = implode("_",$filenameMateri);
+            $filenameMateri = $filenameMateri.".".$rawMateri->extension();
+            $rawMateri->move(public_path("/uploads/materi"),$filenameMateri);
+        }
 
         //Proses input file contoh schedule
-        $rawSchedule = $request->file('schedule_path');
-        $filenameSchedule[] = str_replace(" ","_",trim($input['title']));
-        $filenameSchedule[] = "materi_".time();
-        $filenameSchedule = implode("_",$filenameSchedule);
-        $filenameSchedule = $filenameSchedule.".".$rawSchedule->extension();
-        $rawSchedule->move(public_path("/uploads/schedules"),$filenameSchedule);
+        if(!empty($request->file('schedule_path'))){
+            $rawSchedule = $request->file('schedule_path');
+            $filenameSchedule[] = str_replace(" ","_",trim($input['title']));
+            $filenameSchedule[] = "materi_".time();
+            $filenameSchedule = implode("_",$filenameSchedule);
+            $filenameSchedule = $filenameSchedule.".".$rawSchedule->extension();
+            $rawSchedule->move(public_path("/uploads/schedules"),$filenameSchedule);
+        }
 
         $model = $id ? Program::find($id) : new Program();
         $model->fill($input);
